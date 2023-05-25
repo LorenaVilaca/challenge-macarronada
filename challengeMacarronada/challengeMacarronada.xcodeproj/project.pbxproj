@@ -13,6 +13,8 @@
 		A4B8C0A52A1D343A008FE8BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B8C0A42A1D343A008FE8BE /* Preview Assets.xcassets */; };
 		A4B8C0AE2A1D3661008FE8BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8C0AD2A1D3661008FE8BE /* Image.swift */; };
 		A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8C0AF2A1D3C16008FE8BE /* Color.swift */; };
+		C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */ = {isa = PBXBuildFile; productRef = C06A58522A1FEDC2008FCF2F /* Shift */; };
+		C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		A4B8C0A62A1D343A008FE8BE /* challengeMacarronada.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = challengeMacarronada.entitlements; sourceTree = "<group>"; };
 		A4B8C0AD2A1D3661008FE8BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4B8C0AF2A1D3C16008FE8BE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B8C0AC2A1D3651008FE8BE /* Extensions */,
+				C06A584E2A1FDE5E008FCF2F /* CalendarEvent */,
 				A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */,
 				A4B8C09F2A1D3438008FE8BE /* ContentView.swift */,
 				A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */,
@@ -83,6 +88,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C06A584E2A1FDE5E008FCF2F /* CalendarEvent */ = {
+			isa = PBXGroup;
+			children = (
+				C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */,
+			);
+			path = CalendarEvent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +112,9 @@
 			dependencies = (
 			);
 			name = challengeMacarronada;
+			packageProductDependencies = (
+				C06A58522A1FEDC2008FCF2F /* Shift */,
+			);
 			productName = challengeMacarronada;
 			productReference = A4B8C09A2A1D3438008FE8BE /* challengeMacarronada.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +143,9 @@
 				Base,
 			);
 			mainGroup = A4B8C0912A1D3438008FE8BE;
+			packageReferences = (
+				C06A58512A1FEDC2008FCF2F /* XCRemoteSwiftPackageReference "Shift" */,
+			);
 			productRefGroup = A4B8C09B2A1D3438008FE8BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */,
 				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
 				A4B8C0AE2A1D3661008FE8BE /* Image.swift in Sources */,
@@ -286,10 +306,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = Y587ZJ8Z8V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,10 +334,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = Y587ZJ8Z8V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -352,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C06A58512A1FEDC2008FCF2F /* XCRemoteSwiftPackageReference "Shift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vinhnx/Shift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C06A58522A1FEDC2008FCF2F /* Shift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C06A58512A1FEDC2008FCF2F /* XCRemoteSwiftPackageReference "Shift" */;
+			productName = Shift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4B8C0922A1D3438008FE8BE /* Project object */;
 }
