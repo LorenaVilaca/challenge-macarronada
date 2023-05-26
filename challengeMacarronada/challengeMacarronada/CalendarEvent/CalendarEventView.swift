@@ -10,7 +10,7 @@ import Shift
 import EventKit
 
 struct CalendarEventView: View {
-    @StateObject var eventKitWrapper = Shift.shared
+    @StateObject private var eventKitWrapper = Shift.shared
     @State private var selectedEvent: EKEvent?
     
     var body: some View {
