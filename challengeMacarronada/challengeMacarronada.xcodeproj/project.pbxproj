@@ -16,6 +16,16 @@
 		C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */ = {isa = PBXBuildFile; productRef = C06A58522A1FEDC2008FCF2F /* Shift */; };
 		C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */; };
 		C06A58572A2129D7008FCF2F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58562A2129D7008FCF2F /* CalendarViewModel.swift */; };
+		C06A585C2A213007008FCF2F /* AboutBPTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A585B2A213007008FCF2F /* AboutBPTime.swift */; };
+		C06A585E2A21411C008FCF2F /* NotificationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A585D2A21411C008FCF2F /* NotificationScreen.swift */; };
+		C06A58632A250F39008FCF2F /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58622A250F39008FCF2F /* CalendarScreen.swift */; };
+		C06A58662A2510B3008FCF2F /* BlueButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58652A2510B3008FCF2F /* BlueButtonStyle.swift */; };
+		C06A58682A251645008FCF2F /* PurpleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58672A251645008FCF2F /* PurpleButtonStyle.swift */; };
+		C06A586A2A252083008FCF2F /* WhiteButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58692A252083008FCF2F /* WhiteButtonStyle.swift */; };
+		C06A586C2A252210008FCF2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A586B2A252210008FCF2F /* HomeView.swift */; };
+		C06A586F2A253838008FCF2F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A586E2A253838008FCF2F /* Coordinator.swift */; };
+		C06A58712A253A2B008FCF2F /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58702A253A2B008FCF2F /* CoordinatorView.swift */; };
+		C06A58732A253E4B008FCF2F /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58722A253E4B008FCF2F /* Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +39,16 @@
 		A4B8C0AF2A1D3C16008FE8BE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventView.swift; sourceTree = "<group>"; };
 		C06A58562A2129D7008FCF2F /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		C06A585B2A213007008FCF2F /* AboutBPTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBPTime.swift; sourceTree = "<group>"; };
+		C06A585D2A21411C008FCF2F /* NotificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreen.swift; sourceTree = "<group>"; };
+		C06A58622A250F39008FCF2F /* CalendarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreen.swift; sourceTree = "<group>"; };
+		C06A58652A2510B3008FCF2F /* BlueButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonStyle.swift; sourceTree = "<group>"; };
+		C06A58672A251645008FCF2F /* PurpleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButtonStyle.swift; sourceTree = "<group>"; };
+		C06A58692A252083008FCF2F /* WhiteButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButtonStyle.swift; sourceTree = "<group>"; };
+		C06A586B2A252210008FCF2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C06A586E2A253838008FCF2F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C06A58702A253A2B008FCF2F /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		C06A58722A253E4B008FCF2F /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,9 @@
 		A4B8C09C2A1D3438008FE8BE /* challengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				C06A586D2A253824008FCF2F /* Coordinator */,
+				C06A58642A251095008FCF2F /* Style */,
+				C06A585A2A212FA8008FCF2F /* Onboarding */,
 				A4B8C0AC2A1D3651008FE8BE /* Extensions */,
 				C06A584E2A1FDE5E008FCF2F /* CalendarEvent */,
 				A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */,
@@ -69,6 +92,7 @@
 				A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */,
 				A4B8C0A62A1D343A008FE8BE /* challengeMacarronada.entitlements */,
 				A4B8C0A32A1D343A008FE8BE /* Preview Content */,
+				C06A586B2A252210008FCF2F /* HomeView.swift */,
 			);
 			path = challengeMacarronada;
 			sourceTree = "<group>";
@@ -86,6 +110,7 @@
 			children = (
 				A4B8C0AD2A1D3661008FE8BE /* Image.swift */,
 				A4B8C0AF2A1D3C16008FE8BE /* Color.swift */,
+				C06A58722A253E4B008FCF2F /* Text.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -97,6 +122,35 @@
 				C06A58562A2129D7008FCF2F /* CalendarViewModel.swift */,
 			);
 			path = CalendarEvent;
+			sourceTree = "<group>";
+		};
+		C06A585A2A212FA8008FCF2F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C06A585B2A213007008FCF2F /* AboutBPTime.swift */,
+				C06A585D2A21411C008FCF2F /* NotificationScreen.swift */,
+				C06A58622A250F39008FCF2F /* CalendarScreen.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C06A58642A251095008FCF2F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				C06A58652A2510B3008FCF2F /* BlueButtonStyle.swift */,
+				C06A58672A251645008FCF2F /* PurpleButtonStyle.swift */,
+				C06A58692A252083008FCF2F /* WhiteButtonStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		C06A586D2A253824008FCF2F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C06A586E2A253838008FCF2F /* Coordinator.swift */,
+				C06A58702A253A2B008FCF2F /* CoordinatorView.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +229,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06A585C2A213007008FCF2F /* AboutBPTime.swift in Sources */,
+				C06A58712A253A2B008FCF2F /* CoordinatorView.swift in Sources */,
 				C06A58572A2129D7008FCF2F /* CalendarViewModel.swift in Sources */,
+				C06A586C2A252210008FCF2F /* HomeView.swift in Sources */,
+				C06A585E2A21411C008FCF2F /* NotificationScreen.swift in Sources */,
+				C06A586A2A252083008FCF2F /* WhiteButtonStyle.swift in Sources */,
 				C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */,
+				C06A586F2A253838008FCF2F /* Coordinator.swift in Sources */,
 				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
+				C06A58732A253E4B008FCF2F /* Text.swift in Sources */,
 				A4B8C0AE2A1D3661008FE8BE /* Image.swift in Sources */,
+				C06A58632A250F39008FCF2F /* CalendarScreen.swift in Sources */,
+				C06A58662A2510B3008FCF2F /* BlueButtonStyle.swift in Sources */,
 				A4B8C09E2A1D3438008FE8BE /* challengeMacarronadaApp.swift in Sources */,
+				C06A58682A251645008FCF2F /* PurpleButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

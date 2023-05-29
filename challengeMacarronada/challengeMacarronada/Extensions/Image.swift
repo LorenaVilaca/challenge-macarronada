@@ -5,7 +5,9 @@ extension Image {
 }
 
 struct ImageThemes {
-    let mvPhtot = Image("mvphoto")
+    let aboutBPTimeImage = Image("imageAbout")
+    let notificationScreenImage = Image("notificationImage")
+    let calendarScreenImage = Image("calendarImage")
 }
 
 

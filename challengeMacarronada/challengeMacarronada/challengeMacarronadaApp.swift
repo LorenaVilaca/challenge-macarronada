@@ -15,7 +15,9 @@ struct challengeMacarronadaApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            CalendarEventView()
+//            AboutBPTime()
+//            HomeView()
+              CoordinatorView()
         }
     }
 }
