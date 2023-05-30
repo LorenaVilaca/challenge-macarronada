@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Shift
 
 @main
 struct challengeMacarronadaApp: App {
+    init() {
+        Shift.configureWithAppName("BPTiming")
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            AboutBPTime()
+//            HomeView()
+              CoordinatorView()
         }
     }
 }
