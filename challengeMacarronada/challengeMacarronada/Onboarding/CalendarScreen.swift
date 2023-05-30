@@ -38,7 +38,7 @@ struct CalendarScreen: View {
                                 coordinator.dissmissSheet()
                             } label: {
                                 Text(Text.texts.allow).textButtons()
-                                    .frame(minWidth: 148, maxWidth: .infinity)
+                                    .frame(maxWidth: 148/*, maxWidth: .infinity*/)
                             }.buttonStyle(PurpleButtonStyle())
                         }
                         ZStack {
@@ -47,7 +47,7 @@ struct CalendarScreen: View {
                             } label: {
                                 Text(Text.texts.notNow)
                                     .font(.system(size: 17, weight: .semibold))
-                                    .frame(minWidth: 148, maxWidth: .infinity)
+                                    .frame(maxWidth: 148/*, maxWidth: .infinity*/)
                             }.buttonStyle(WhiteButtonStyle())
                         }
                     }
@@ -63,6 +63,7 @@ struct CalendarScreen: View {
                         .fill(Color.white)
                         .frame(width: 8, height: 8)
                 }
+                .padding(.bottom, 53)
             }
             .frame(maxWidth: 800, maxHeight: 560)
         }

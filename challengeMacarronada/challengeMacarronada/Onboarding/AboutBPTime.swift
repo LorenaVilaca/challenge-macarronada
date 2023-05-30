@@ -40,7 +40,7 @@ struct AboutBPTime: View {
                     } label: {
                         Text(Text.texts.nextButton)
                             .font(.system(size: 17, weight: .semibold))
-                            .frame(minWidth: 148, maxWidth: .infinity)
+                            .frame(maxWidth: 148/*, maxWidth: .infinity*/)
                     }.buttonStyle(PurpleButtonStyle())
                 }
                     HStack (alignment: .center) {
@@ -54,6 +54,7 @@ struct AboutBPTime: View {
                             .fill(Color.gray)
                             .frame(width: 8, height: 8)
                     }
+                    .padding(.bottom, 53)
             }
         }
         .frame(maxWidth: 800, maxHeight: 560)
