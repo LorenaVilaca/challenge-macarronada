@@ -68,5 +68,5 @@ struct Texts {
     let data = "Guardar os dados do seu BPT no calendário"
     let signs = "Preencha seus sinais"
     let send = "Enviar"
-    
+    let add = "Adicionar"
 }

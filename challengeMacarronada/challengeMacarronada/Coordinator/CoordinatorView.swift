@@ -11,6 +11,9 @@ struct CoordinatorView: View {
     
     @StateObject var coordinator = Coordinator()
     
+    @StateObject private var dataController = DataController()
+    @StateObject private var graphDayViewModel = GraphViewModel()
+    
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             coordinator.build(page: .home)
@@ -23,11 +26,8 @@ struct CoordinatorView: View {
                 }
         }
         .environmentObject(coordinator)
+        .environmentObject(graphDayViewModel)
+        .environment(\.managedObjectContext, dataController.container.viewContext)
     }
 }
 
-struct CoordinatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoordinatorView()
-    }
-}
