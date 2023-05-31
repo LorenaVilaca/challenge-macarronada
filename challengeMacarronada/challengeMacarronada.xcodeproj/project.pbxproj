@@ -25,6 +25,13 @@
 		A4F477A72A27A97A00E93482 /* GraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A62A27A97A00E93482 /* GraphViewModel.swift */; };
 		A4F477AA2A27A99700E93482 /* RatingCircleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A82A27A99700E93482 /* RatingCircleComponent.swift */; };
 		A4F477AB2A27A99700E93482 /* SelectAvaliationCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A92A27A99700E93482 /* SelectAvaliationCircle.swift */; };
+		C01025122A27E17A003AD654 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02A2A27B1F7005FA136 /* Manrope-Bold.ttf */; };
+		C01025132A27E17E003AD654 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02B2A27B1F7005FA136 /* Manrope-ExtraBold.ttf */; };
+		C01025142A27E181003AD654 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02E2A27B1F7005FA136 /* Manrope-ExtraLight.ttf */; };
+		C01025152A27E185003AD654 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02D2A27B1F7005FA136 /* Manrope-Light.ttf */; };
+		C01025162A27E188003AD654 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F0292A27B1F7005FA136 /* Manrope-Medium.ttf */; };
+		C01025172A27E18B003AD654 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02C2A27B1F7005FA136 /* Manrope-Regular.ttf */; };
+		C01025182A27E191003AD654 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02F2A27B1F7005FA136 /* Manrope-SemiBold.ttf */; };
 		C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */ = {isa = PBXBuildFile; productRef = C06A58522A1FEDC2008FCF2F /* Shift */; };
 		C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */; };
 		C06A58572A2129D7008FCF2F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58562A2129D7008FCF2F /* CalendarViewModel.swift */; };
@@ -337,8 +344,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01025172A27E18B003AD654 /* Manrope-Regular.ttf in Resources */,
 				A4B8C0A52A1D343A008FE8BE /* Preview Assets.xcassets in Resources */,
+				C01025132A27E17E003AD654 /* Manrope-ExtraBold.ttf in Resources */,
+				C01025122A27E17A003AD654 /* Manrope-Bold.ttf in Resources */,
+				C01025182A27E191003AD654 /* Manrope-SemiBold.ttf in Resources */,
+				C01025162A27E188003AD654 /* Manrope-Medium.ttf in Resources */,
 				A4B8C0A22A1D343A008FE8BE /* Assets.xcassets in Resources */,
+				C01025152A27E185003AD654 /* Manrope-Light.ttf in Resources */,
+				C01025142A27E181003AD654 /* Manrope-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
