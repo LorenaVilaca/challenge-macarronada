@@ -35,10 +35,21 @@ extension Text {
             .font(.system(size: 16, weight: .medium))
     }
     
+    func textRegular() -> Text {
+        return self
+            .font(.system(size: 16, weight: .regular))
+    }
+    
     func textButtons() -> Text {
         return self
             .font(.system(size: 17, weight: .semibold))
     }
+    
+    func secondTitle() -> Text {
+        return self
+            .font(.system(size: 20, weight: .bold))
+    }
+    
     static let texts = Texts()
     
 }
