@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "axissegmentedview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisSegmentedView",
+      "state" : {
+        "revision" : "4a9a9c6c5b32b51e5d2fd4c30e8c475658853131",
+        "version" : "0.5.2"
+      }
+    },
+    {
       "identity" : "shift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vinhnx/Shift",

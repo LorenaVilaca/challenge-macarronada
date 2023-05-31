@@ -35,10 +35,22 @@ extension Text {
             .font(.system(size: 16, weight: .medium))
     }
     
+    func textRegular() -> Text {
+        return self
+            .font(.system(size: 16, weight: .regular))
+
+    }
+    
     func textButtons() -> Text {
         return self
             .font(.system(size: 17, weight: .semibold))
     }
+    
+    func secondTitle() -> Text {
+        return self
+            .font(.system(size: 20, weight: .bold))
+    }
+    
     static let texts = Texts()
     
 }
@@ -47,7 +59,7 @@ struct Texts {
     
     let titleBPT = "BPTime"
     let fillInSignals = "Preencha seus sinais"
-    let yourChart = "Seu gráfico"
+    let yourChart = "Aqui o seu BPT"
     let timeNow = "Horário atual: "
     let hour = "Hora"
     let value = "Valor"
@@ -69,4 +81,7 @@ struct Texts {
     let signs = "Preencha seus sinais"
     let send = "Enviar"
     let add = "Adicionar"
+    let knowMore = "Saiba mais"
+    let whatBPT = "O que é o BPT?"
+    let nemo = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma."
 }
