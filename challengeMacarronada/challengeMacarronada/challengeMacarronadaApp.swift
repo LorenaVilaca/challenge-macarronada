@@ -10,14 +10,18 @@ import Shift
 
 @main
 struct challengeMacarronadaApp: App {
+    
+    @AppStorage("showMenuBarExtra") private var showMenuBarExtra = true
+    
     init() {
         Shift.configureWithAppName("BPTiming")
     }
     var body: some Scene {
         WindowGroup {
-//            AboutBPTime()
-//            HomeView()
               CoordinatorView()
         }
+        MenuBarExtra("App Teste", systemImage: "star", isInserted: $showMenuBarExtra) {
+            StatusMenuView()
+        }.menuBarExtraStyle(.window)
     }
 }

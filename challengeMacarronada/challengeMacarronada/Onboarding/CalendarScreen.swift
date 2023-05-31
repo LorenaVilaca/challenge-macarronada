@@ -54,10 +54,10 @@ struct CalendarScreen: View {
                 }
                 HStack (alignment: .center) {
                     Circle()
-                        .fill(Color.gray)
+                        .fill(Color.theme.upOrDownGray)
                         .frame(width: 8, height: 8)
                     Circle()
-                        .fill(Color.gray)
+                        .fill(Color.theme.upOrDownGray)
                         .frame(width: 8, height: 8)
                     Circle()
                         .fill(Color.white)
