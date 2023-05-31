@@ -69,4 +69,7 @@ struct Texts {
     let signs = "Preencha seus sinais"
     let send = "Enviar"
     let add = "Adicionar"
+    let knowMore = "Saiba mais"
+    let whatBPT = "O que é o BPT?"
+    let nemo = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma."
 }

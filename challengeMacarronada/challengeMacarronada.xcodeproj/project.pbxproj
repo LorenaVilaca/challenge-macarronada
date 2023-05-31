@@ -25,6 +25,7 @@
 		A4F477A72A27A97A00E93482 /* GraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A62A27A97A00E93482 /* GraphViewModel.swift */; };
 		A4F477AA2A27A99700E93482 /* RatingCircleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A82A27A99700E93482 /* RatingCircleComponent.swift */; };
 		A4F477AB2A27A99700E93482 /* SelectAvaliationCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A92A27A99700E93482 /* SelectAvaliationCircle.swift */; };
+		A4F477AE2A27C81500E93482 /* AxisSegmentedView in Frameworks */ = {isa = PBXBuildFile; productRef = A4F477AD2A27C81500E93482 /* AxisSegmentedView */; };
 		C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */ = {isa = PBXBuildFile; productRef = C06A58522A1FEDC2008FCF2F /* Shift */; };
 		C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */; };
 		C06A58572A2129D7008FCF2F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58562A2129D7008FCF2F /* CalendarViewModel.swift */; };
@@ -87,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */,
+				A4F477AE2A27C81500E93482 /* AxisSegmentedView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +266,7 @@
 			name = challengeMacarronada;
 			packageProductDependencies = (
 				C06A58522A1FEDC2008FCF2F /* Shift */,
+				A4F477AD2A27C81500E93482 /* AxisSegmentedView */,
 			);
 			productName = challengeMacarronada;
 			productReference = A4B8C09A2A1D3438008FE8BE /* challengeMacarronada.app */;
@@ -295,6 +298,7 @@
 			mainGroup = A4B8C0912A1D3438008FE8BE;
 			packageReferences = (
 				C06A58512A1FEDC2008FCF2F /* XCRemoteSwiftPackageReference "Shift" */,
+				A4F477AC2A27C81500E93482 /* XCRemoteSwiftPackageReference "AxisSegmentedView" */,
 			);
 			productRefGroup = A4B8C09B2A1D3438008FE8BE /* Products */;
 			projectDirPath = "";
@@ -552,6 +556,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A4F477AC2A27C81500E93482 /* XCRemoteSwiftPackageReference "AxisSegmentedView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AxisSegmentedView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
+			};
+		};
 		C06A58512A1FEDC2008FCF2F /* XCRemoteSwiftPackageReference "Shift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vinhnx/Shift";
@@ -563,6 +575,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A4F477AD2A27C81500E93482 /* AxisSegmentedView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4F477AC2A27C81500E93482 /* XCRemoteSwiftPackageReference "AxisSegmentedView" */;
+			productName = AxisSegmentedView;
+		};
 		C06A58522A1FEDC2008FCF2F /* Shift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C06A58512A1FEDC2008FCF2F /* XCRemoteSwiftPackageReference "Shift" */;
