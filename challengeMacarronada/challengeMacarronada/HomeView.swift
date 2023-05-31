@@ -7,8 +7,13 @@
 
 import SwiftUI
 import Charts
+import AppKit
 
 struct HomeView: View {
+    
+    init () {
+//        NSSegmentedControl.Style = .rounded
+    }
     
     @EnvironmentObject private var coordinator: Coordinator
     @Environment(\.managedObjectContext) var moc
@@ -40,12 +45,26 @@ struct HomeView: View {
                         .padding()
                     
                     
-                    Picker(Text.texts.empty, selection: $graphDayViewModel.selectedSegmented) {
-                        ForEach(segmented.allCases) { option in
-                            Text(String(describing: option))
+                    VStack {
+                        
+                        Picker(Text.texts.empty, selection: $graphDayViewModel.selectedSegmented) {
+                            ForEach(segmented.allCases) { option in
+                                Text(String(describing: option))
+                            }
                         }
+                        .pickerStyle(SegmentedPickerStyle())
+                        
                     }
-                    .pickerStyle(.segmented)
+                    .frame(height: 30)
+                    .foregroundColor(.white)
+                    .background(.clear)
+                    .border(.white, width: 1)
+                    .cornerRadius(8)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 10)
+                    .font(.headline)
+                    
+                    
                     
                     VStack {
                         
@@ -137,7 +156,6 @@ struct HomeView: View {
                     Spacer()
                     
                 }
-                .background(Color.indigo)
                 .padding(.leading)
                 .padding(.trailing)
                 .padding(.bottom)
@@ -148,11 +166,26 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                     
-                    Picker(Text.texts.empty, selection: $graphDayViewModel.selectedTypeOfFilter) {
-                        ForEach(typeOfFilter.allCases) { option in
-                            Text(String(describing: option))
+                    
+                    VStack {
+                        
+                        Picker(Text.texts.empty, selection: $graphDayViewModel.selectedTypeOfFilter) {
+                            ForEach(typeOfFilter.allCases) { option in
+                                Text(String(describing: option))
+                            }
                         }
-                    }.pickerStyle(.segmented)
+                        .pickerStyle(SegmentedPickerStyle())
+                            
+                        
+                    }
+                    .frame(height: 30)
+                    .foregroundColor(.white)
+                    .background(.clear)
+                    .border(.white, width: 1)
+                    .cornerRadius(8)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 10)
+                    .font(.headline)
                     
                     Chart {
 
@@ -227,9 +260,16 @@ struct HomeView: View {
             
             
         }
+        .background(
+            Image.theme.background
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
+        )
         .onAppear {
             coordinator.present(sheet: .onboardingOne)
         }
     }
 }
+
 
