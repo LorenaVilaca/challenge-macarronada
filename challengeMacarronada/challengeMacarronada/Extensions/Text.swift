@@ -4,40 +4,40 @@ extension Text {
     
     func headerOne() -> Text {
         return self
-            .font(.system(size: 36, weight: .bold))
+            .font(.custom(Fonts.B, size: 36))
             .foregroundColor(.white)
     }
     
     func headerTwo() -> Text {
         return self
-            .font(.system(size: 20, weight: .bold))
+            .font(.custom(Fonts.B, size: 20))
             .foregroundColor(.white)
     }
     
     func headerThree() -> Text {
         return self
-            .font(.system(size: 16, weight: .bold))
+            .font(.custom(Fonts.B, size: 16))
             .foregroundColor(.white)
     }
     
     func headerOnboarding() -> Text {
         return self
-            .font(.system(size: 20, weight: .bold))
+            .font(.custom(Fonts.B, size: 20))
     }
     
     func FEM_menuBar() -> Text {
         return self
-            .font(.system(size: 18, weight: .bold))
+            .font(.custom(Fonts.B, size: 18))
     }
     
     func textOnboarding() -> Text {
         return self
-            .font(.system(size: 16, weight: .medium))
+            .font(.custom(Fonts.B, size: 16))
     }
     
     func textButtons() -> Text {
         return self
-            .font(.system(size: 17, weight: .semibold))
+            .font(.custom(Fonts.B, size: 17))
     }
     static let texts = Texts()
     
@@ -69,4 +69,5 @@ struct Texts {
     let signs = "Preencha seus sinais"
     let send = "Enviar"
     let add = "Adicionar"
+
 }

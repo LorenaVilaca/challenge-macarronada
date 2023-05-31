@@ -26,17 +26,45 @@ enum Sheet: String, Identifiable {
     }
 }
 
+class OnboardingManager {
+    
+    static let shared = OnboardingManager()
+    
+    var sheetQuantity = 3
+    
+    var didUserNotSeenOnboarding: Bool {
+        return UserDefaults.standard.value(forKey: "onboardinggg") != nil
+    }
+    
+    private init () {}
+    
+    func onboardingWasSeen() {
+        UserDefaults.standard.setValue(true, forKey: "onboardinggg")
+        
+    }
+    
+}
+
 class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath()
     @Published var sheet: Sheet?
+    
+    var sheetQuantity = 3
     
     func push(_ page: Page) {
         path.append(page)
     }
     
     func present(sheet: Sheet) {
+        if OnboardingManager.shared.didUserNotSeenOnboarding { return }
         self.sheet = sheet
+        sheetQuantity -= 1
+        
+        if sheetQuantity == 0 {
+            OnboardingManager.shared.onboardingWasSeen()
+        }
+
     }
     
     func dissmissSheet() {
