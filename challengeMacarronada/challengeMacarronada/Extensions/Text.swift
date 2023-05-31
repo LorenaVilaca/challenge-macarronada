@@ -38,6 +38,7 @@ extension Text {
     func textRegular() -> Text {
         return self
             .font(.system(size: 16, weight: .regular))
+
     }
     
     func textButtons() -> Text {
@@ -58,7 +59,7 @@ struct Texts {
     
     let titleBPT = "BPTime"
     let fillInSignals = "Preencha seus sinais"
-    let yourChart = "Seu gráfico"
+    let yourChart = "Aqui o seu BPT"
     let timeNow = "Horário atual: "
     let hour = "Hora"
     let value = "Valor"

@@ -34,13 +34,13 @@ struct HomeView: View {
         
         GeometryReader { geo in
             
-            ZStack {
+            ZStack (alignment: .center) {
                 Image.theme.background
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack (alignment: .center) {
+                VStack () {
                     
                     GeometryReader { geometry in
                         
@@ -160,51 +160,54 @@ struct HomeView: View {
                                 Spacer()
                                 
                             }
-                            .frame(width: geometry.size.width * 0.26, height: geometry.size.height)
-                            .background(Color.white.opacity(0.1))
+                            .frame(width: geo.size.width * 0.17, height: geo.size.height * 0.43)
+//                            .background(Color.white.opacity(0.1))
+                            .background(.pink)
                             .cornerRadius(8)
                             
                             Spacer()
                             
                             VStack {
                                 
-                                VStack {
+                                VStack (alignment: .leading) {
                                     Text(Text.texts.knowMore).secondTitle()
-                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .frame(width: geo.size.width * 0.1, height: geo.size.height * 0.04, alignment: .leading)
                                     
                                     
-                                    ZStack {
-                                        VStack (alignment: .leading) {
-                                            
-                                            Text(Text.texts.whatBPT).FEM_menuBar()
-                                                .padding()
-                                            
-                                            Text(Text.texts.nemo).textRegular()
-                                                .lineSpacing(10)
-                                                .padding()
-                                            
-                                        }
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.23, height: geometry.size.height * 0.46, alignment: .leading)
-                                    }
-                                    .frame(width: geometry.size.width * 0.59, height: geometry.size.height * 0.59, alignment: .leading)
-                                    .background(
+                                    ZStack (alignment: .leading) {
+                                        
                                         Image.theme.backgroundKnowMore
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .edgesIgnoringSafeArea(.all)
-                                    )
+                                            .frame(width: geo.size.width * 0.39, height: geo.size.height * 0.25)
+                                        
+                                        VStack (alignment: .leading) {
+                                            
+                                            Text(Text.texts.whatBPT).FEM_menuBar()
+                                                .frame(width: geo.size.width * 0.25, height: geo.size.height * 0.03, alignment: .leading)
+                                            
+                                            Text(Text.texts.nemo).textRegular()
+                                                .frame(width: geo.size.width * 0.15, height: geo.size.height * 0.1)
+                                                .lineSpacing(10)
+                                            
+                                        }
+                                        
+                                        .padding()
+                                        .frame(width: geo.size.width * 0.25, height: geo.size.height * 0.2, alignment: .leading)
+                                    }
+                                    .frame(width: geo.size.width * 0.39, height: geo.size.height * 0.25)
                                     
                                 }
                                 
                                 
                             }
-                            .frame(width: geometry.size.width * 0.7, height: geometry.size.height)
+                            .frame(width: geo.size.width * 0.46, height: geo.size.height * 0.43)
                             .background(Color.white.opacity(0.1))
                             .cornerRadius(8)
                         }
                         
-                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .frame(width: geo.size.width * 0.65, height: geo.size.height * 0.43)
                     }
                     
                     VStack {
@@ -293,7 +296,6 @@ struct HomeView: View {
                             
                             
                         }
-                        .padding()
                         .chartForegroundStyleScale(
                             domain: [Text.texts.focus, Text.texts.energy, Text.texts.motivation],
                             range: [.red, .blue, .green]
@@ -302,9 +304,9 @@ struct HomeView: View {
                         
                         
                     }
+                    .frame(width: geo.size.width * 0.65, height: geo.size.height * 0.42)
                     
                 }
-
                 .onAppear {
                     coordinator.present(sheet: .onboardingOne)
                 }
