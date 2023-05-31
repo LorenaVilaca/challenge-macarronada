@@ -48,10 +48,10 @@ struct AboutBPTime: View {
                             .fill(Color.white)
                             .frame(width: 8, height: 8)
                         Circle()
-                            .fill(Color.gray)
+                            .fill(Color.theme.upOrDownGray)
                             .frame(width: 8, height: 8)
                         Circle()
-                            .fill(Color.gray)
+                            .fill(Color.theme.upOrDownGray)
                             .frame(width: 8, height: 8)
                     }
                     .padding(.bottom, 53)

@@ -26,6 +26,9 @@
 		C06A586F2A253838008FCF2F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A586E2A253838008FCF2F /* Coordinator.swift */; };
 		C06A58712A253A2B008FCF2F /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58702A253A2B008FCF2F /* CoordinatorView.swift */; };
 		C06A58732A253E4B008FCF2F /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58722A253E4B008FCF2F /* Text.swift */; };
+		C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58752A267E02008FCF2F /* StatusMenuView.swift */; };
+		C06A58792A268272008FCF2F /* MenuBarButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58782A268272008FCF2F /* MenuBarButtonType.swift */; };
+		C06A587C2A26839E008FCF2F /* ButtonTypeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A587B2A26839E008FCF2F /* ButtonTypeStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		C06A586E2A253838008FCF2F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C06A58702A253A2B008FCF2F /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		C06A58722A253E4B008FCF2F /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		C06A58752A267E02008FCF2F /* StatusMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuView.swift; sourceTree = "<group>"; };
+		C06A58782A268272008FCF2F /* MenuBarButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarButtonType.swift; sourceTree = "<group>"; };
+		C06A587B2A26839E008FCF2F /* ButtonTypeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 		A4B8C09C2A1D3438008FE8BE /* challengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				C06A587A2A268384008FCF2F /* Enum */,
+				C06A58772A26824F008FCF2F /* Components */,
+				C06A58742A267DE0008FCF2F /* Menu Bar */,
 				C06A586D2A253824008FCF2F /* Coordinator */,
 				C06A58642A251095008FCF2F /* Style */,
 				C06A585A2A212FA8008FCF2F /* Onboarding */,
@@ -151,6 +160,30 @@
 				C06A58702A253A2B008FCF2F /* CoordinatorView.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C06A58742A267DE0008FCF2F /* Menu Bar */ = {
+			isa = PBXGroup;
+			children = (
+				C06A58752A267E02008FCF2F /* StatusMenuView.swift */,
+			);
+			path = "Menu Bar";
+			sourceTree = "<group>";
+		};
+		C06A58772A26824F008FCF2F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C06A58782A268272008FCF2F /* MenuBarButtonType.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C06A587A2A268384008FCF2F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C06A587B2A26839E008FCF2F /* ButtonTypeStyle.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06A587C2A26839E008FCF2F /* ButtonTypeStyle.swift in Sources */,
 				C06A585C2A213007008FCF2F /* AboutBPTime.swift in Sources */,
 				C06A58712A253A2B008FCF2F /* CoordinatorView.swift in Sources */,
+				C06A58792A268272008FCF2F /* MenuBarButtonType.swift in Sources */,
 				C06A58572A2129D7008FCF2F /* CalendarViewModel.swift in Sources */,
 				C06A586C2A252210008FCF2F /* HomeView.swift in Sources */,
 				C06A585E2A21411C008FCF2F /* NotificationScreen.swift in Sources */,
@@ -238,6 +273,7 @@
 				C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */,
 				C06A586F2A253838008FCF2F /* Coordinator.swift in Sources */,
 				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
+				C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */,
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
 				C06A58732A253E4B008FCF2F /* Text.swift in Sources */,
 				A4B8C0AE2A1D3661008FE8BE /* Image.swift in Sources */,

@@ -13,19 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            Color.green
-                .edgesIgnoringSafeArea(.all)
-            Button {
-
-            } label: {
-                Text("Button")
-                    .foregroundColor(.green)
-                    .font(.headline)
-                    .padding(20)
-                    .background(Color.white.cornerRadius(20))
-            }
-//            .frame(maxWidth: 800, maxHeight: 560)
-
+            MenuBarButtonType(style: .down)
         }
         .onAppear {
             coordinator.present(sheet: .onboardingOne)

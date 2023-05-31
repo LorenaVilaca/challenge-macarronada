@@ -37,31 +37,31 @@ struct NotificationScreen: View {
                         Button {
                             coordinator.present(sheet: .onboardingThree)
                         } label: {
-                            Text(Text.texts.allow).textButtons()
+                            Text(Text.texts.enable).textButtons()
                                 .frame(maxWidth: 148/*, maxWidth: .infinity*/)
                         }.buttonStyle(PurpleButtonStyle())
                     }
-                    ZStack {
-                        Button {
-                            coordinator.present(sheet: .onboardingThree)
-                        } label: {
-                            Text(Text.texts.notNow)
-                                .font(.system(size: 17, weight: .semibold))
-                                .frame(maxWidth: 148/*, maxWidth: .infinity*/)
-                        }.buttonStyle(WhiteButtonStyle())
-                    }
+//                    ZStack {
+//                        Button {
+//                            coordinator.present(sheet: .onboardingThree)
+//                        } label: {
+//                            Text(Text.texts.notNow)
+//                                .font(.system(size: 17, weight: .semibold))
+//                                .frame(maxWidth: 148/*, maxWidth: .infinity*/)
+//                        }.buttonStyle(WhiteButtonStyle())
+//                    }
                 }
                 .padding([.leading, .trailing], 80)
             }
             HStack (alignment: .center) {
                 Circle()
-                    .fill(Color.gray)
+                    .fill(Color.theme.upOrDownGray)
                     .frame(width: 8, height: 8)
                 Circle()
                     .fill(Color.white)
                     .frame(width: 8, height: 8)
                 Circle()
-                    .fill(Color.gray)
+                    .fill(Color.theme.upOrDownGray)
                     .frame(width: 8, height: 8)
             }
             .padding(.bottom, 53)
