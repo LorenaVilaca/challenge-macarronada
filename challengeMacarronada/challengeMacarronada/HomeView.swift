@@ -161,8 +161,7 @@ struct HomeView: View {
                                 
                             }
                             .frame(width: geo.size.width * 0.17, height: geo.size.height * 0.43)
-//                            .background(Color.white.opacity(0.1))
-                            .background(.pink)
+                            .background(Color.white.opacity(0.1))
                             .cornerRadius(8)
                             
                             Spacer()
