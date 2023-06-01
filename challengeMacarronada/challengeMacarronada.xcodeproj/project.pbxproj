@@ -151,9 +151,6 @@
 		A4B8C09C2A1D3438008FE8BE /* challengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD2142A267E5C00240865 /* LocalNotification.swift */,
-				0DFD2BA42A253BF900DB9FD4 /* Views */,
-				0DFD2BA12A25261800DB9FD4 /* Managers */,
 				C097F0302A27B628005FA136 /* Info.plist */,
 				C097F0282A27B1DA005FA136 /* Fonts */,
 				A4F477A52A27A96A00E93482 /* ViewModel */,
@@ -166,6 +163,8 @@
 				C06A58642A251095008FCF2F /* Style */,
 				C06A585A2A212FA8008FCF2F /* Onboarding */,
 				A4B8C0AC2A1D3651008FE8BE /* Extensions */,
+				0DFD2BA12A25261800DB9FD4 /* Managers */,
+				0DFD2BA42A253BF900DB9FD4 /* Views */,
 				C06A584E2A1FDE5E008FCF2F /* CalendarEvent */,
 				A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */,
 				A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */,
@@ -209,6 +208,7 @@
 		A4F477A02A27A91B00E93482 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0D1DD2142A267E5C00240865 /* LocalNotification.swift */,
 				A4F477A22A27A92B00E93482 /* DataFormat.swift */,
 				A4F477A12A27A92B00E93482 /* InfoHourCalculator.swift */,
 			);
@@ -412,7 +412,6 @@
 				C0CA287F2A27C03B009A76CD /* Fonts.swift in Sources */,
 				A4F4779D2A27A8CD00E93482 /* enumSegmented.swift in Sources */,
 				A4F477A32A27A92B00E93482 /* InfoHourCalculator.swift in Sources */,
-				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
 				A4F477A42A27A92B00E93482 /* DataFormat.swift in Sources */,
 				C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */,
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
