@@ -19,14 +19,12 @@ struct AboutBPTime: View {
             .padding(.top, 48)
             VStack (spacing: 12) {
                 HStack {
-                    Text(Text.texts.greeting)
-                        .font(.system(size: 20, weight: .bold))
+                    Text(Text.texts.greeting).headerTwo()
                     Spacer()
                 }
                 .padding(.leading, 80)
                 HStack {
-                    Text(Text.texts.textOnboardingOne)
-                        .font(.system(size: 16, weight: .medium))
+                    Text(Text.texts.textOnboardingOne).textOnboarding()
                         .frame(height: 72)
                         .multilineTextAlignment(.leading)
                     Spacer()
@@ -38,9 +36,8 @@ struct AboutBPTime: View {
                     Button {
                         coordinator.present(sheet: .onboardingTwo)
                     } label: {
-                        Text(Text.texts.nextButton)
-                            .font(.system(size: 17, weight: .semibold))
-                            .frame(maxWidth: 148/*, maxWidth: .infinity*/)
+                        Text(Text.texts.nextButton).textButtons()
+                            .frame(maxWidth: 148)
                     }.buttonStyle(PurpleButtonStyle())
                 }
                     HStack (alignment: .center) {

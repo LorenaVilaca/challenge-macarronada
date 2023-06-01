@@ -38,18 +38,9 @@ struct NotificationScreen: View {
                             coordinator.present(sheet: .onboardingThree)
                         } label: {
                             Text(Text.texts.enable).textButtons()
-                                .frame(maxWidth: 148/*, maxWidth: .infinity*/)
+                                .frame(maxWidth: 148)
                         }.buttonStyle(PurpleButtonStyle())
                     }
-//                    ZStack {
-//                        Button {
-//                            coordinator.present(sheet: .onboardingThree)
-//                        } label: {
-//                            Text(Text.texts.notNow)
-//                                .font(.system(size: 17, weight: .semibold))
-//                                .frame(maxWidth: 148/*, maxWidth: .infinity*/)
-//                        }.buttonStyle(WhiteButtonStyle())
-//                    }
                 }
                 .padding([.leading, .trailing], 80)
             }

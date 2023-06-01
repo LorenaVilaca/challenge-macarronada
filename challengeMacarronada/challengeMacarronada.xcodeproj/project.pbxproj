@@ -25,6 +25,13 @@
 		A4F477A72A27A97A00E93482 /* GraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A62A27A97A00E93482 /* GraphViewModel.swift */; };
 		A4F477AA2A27A99700E93482 /* RatingCircleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A82A27A99700E93482 /* RatingCircleComponent.swift */; };
 		A4F477AB2A27A99700E93482 /* SelectAvaliationCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F477A92A27A99700E93482 /* SelectAvaliationCircle.swift */; };
+		C01025122A27E17A003AD654 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02A2A27B1F7005FA136 /* Manrope-Bold.ttf */; };
+		C01025132A27E17E003AD654 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02B2A27B1F7005FA136 /* Manrope-ExtraBold.ttf */; };
+		C01025142A27E181003AD654 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02E2A27B1F7005FA136 /* Manrope-ExtraLight.ttf */; };
+		C01025152A27E185003AD654 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02D2A27B1F7005FA136 /* Manrope-Light.ttf */; };
+		C01025162A27E188003AD654 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F0292A27B1F7005FA136 /* Manrope-Medium.ttf */; };
+		C01025172A27E18B003AD654 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02C2A27B1F7005FA136 /* Manrope-Regular.ttf */; };
+		C01025182A27E191003AD654 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C097F02F2A27B1F7005FA136 /* Manrope-SemiBold.ttf */; };
 		A4F477AE2A27C81500E93482 /* AxisSegmentedView in Frameworks */ = {isa = PBXBuildFile; productRef = A4F477AD2A27C81500E93482 /* AxisSegmentedView */; };
 		C06A58532A1FEDC2008FCF2F /* Shift in Frameworks */ = {isa = PBXBuildFile; productRef = C06A58522A1FEDC2008FCF2F /* Shift */; };
 		C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58542A1FEE26008FCF2F /* CalendarEventView.swift */; };
@@ -42,6 +49,7 @@
 		C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58752A267E02008FCF2F /* StatusMenuView.swift */; };
 		C06A58792A268272008FCF2F /* MenuBarButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58782A268272008FCF2F /* MenuBarButtonType.swift */; };
 		C06A587C2A26839E008FCF2F /* ButtonTypeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A587B2A26839E008FCF2F /* ButtonTypeStyle.swift */; };
+		C0CA287F2A27C03B009A76CD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA287E2A27C03B009A76CD /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +88,15 @@
 		C06A58752A267E02008FCF2F /* StatusMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuView.swift; sourceTree = "<group>"; };
 		C06A58782A268272008FCF2F /* MenuBarButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarButtonType.swift; sourceTree = "<group>"; };
 		C06A587B2A26839E008FCF2F /* ButtonTypeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypeStyle.swift; sourceTree = "<group>"; };
+		C097F0292A27B1F7005FA136 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		C097F02A2A27B1F7005FA136 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		C097F02B2A27B1F7005FA136 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C097F02C2A27B1F7005FA136 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		C097F02D2A27B1F7005FA136 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		C097F02E2A27B1F7005FA136 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C097F02F2A27B1F7005FA136 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		C097F0302A27B628005FA136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C0CA287E2A27C03B009A76CD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +131,8 @@
 		A4B8C09C2A1D3438008FE8BE /* challengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				C097F0302A27B628005FA136 /* Info.plist */,
+				C097F0282A27B1DA005FA136 /* Fonts */,
 				A4F477A52A27A96A00E93482 /* ViewModel */,
 				A4F477A02A27A91B00E93482 /* Utils */,
 				A4F4778E2A27A5E400E93482 /* CoreData */,
@@ -151,6 +170,7 @@
 				A4B8C0AF2A1D3C16008FE8BE /* Color.swift */,
 				C06A58722A253E4B008FCF2F /* Text.swift */,
 				A4F477942A27A87D00E93482 /* Triangle.swift */,
+				C0CA287E2A27C03B009A76CD /* Fonts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +268,20 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		C097F0282A27B1DA005FA136 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C097F02A2A27B1F7005FA136 /* Manrope-Bold.ttf */,
+				C097F02B2A27B1F7005FA136 /* Manrope-ExtraBold.ttf */,
+				C097F02E2A27B1F7005FA136 /* Manrope-ExtraLight.ttf */,
+				C097F02D2A27B1F7005FA136 /* Manrope-Light.ttf */,
+				C097F0292A27B1F7005FA136 /* Manrope-Medium.ttf */,
+				C097F02C2A27B1F7005FA136 /* Manrope-Regular.ttf */,
+				C097F02F2A27B1F7005FA136 /* Manrope-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,8 +348,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01025172A27E18B003AD654 /* Manrope-Regular.ttf in Resources */,
 				A4B8C0A52A1D343A008FE8BE /* Preview Assets.xcassets in Resources */,
+				C01025132A27E17E003AD654 /* Manrope-ExtraBold.ttf in Resources */,
+				C01025122A27E17A003AD654 /* Manrope-Bold.ttf in Resources */,
+				C01025182A27E191003AD654 /* Manrope-SemiBold.ttf in Resources */,
+				C01025162A27E188003AD654 /* Manrope-Medium.ttf in Resources */,
 				A4B8C0A22A1D343A008FE8BE /* Assets.xcassets in Resources */,
+				C01025152A27E185003AD654 /* Manrope-Light.ttf in Resources */,
+				C01025142A27E181003AD654 /* Manrope-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +383,7 @@
 				C06A586A2A252083008FCF2F /* WhiteButtonStyle.swift in Sources */,
 				C06A58552A1FEE26008FCF2F /* CalendarEventView.swift in Sources */,
 				C06A586F2A253838008FCF2F /* Coordinator.swift in Sources */,
+				C0CA287F2A27C03B009A76CD /* Fonts.swift in Sources */,
 				A4F4779D2A27A8CD00E93482 /* enumSegmented.swift in Sources */,
 				A4F477A32A27A92B00E93482 /* InfoHourCalculator.swift in Sources */,
 				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
@@ -486,10 +528,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = Y587ZJ8Z8V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = challengeMacarronada/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,10 +557,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = Y587ZJ8Z8V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = challengeMacarronada/Info.plist;
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
