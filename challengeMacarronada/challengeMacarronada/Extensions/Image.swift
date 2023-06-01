@@ -14,6 +14,9 @@ struct ImageThemes {
     let meditation = Image("meditation")
     let meditation_blue = Image("meditation-pink")
     let logo = Image("logo")
+    let background = Image("Background")
+    let addButton = Image("addButton")
+    let backgroundKnowMore = Image("backgroundKnowMore")
 }
 
 
