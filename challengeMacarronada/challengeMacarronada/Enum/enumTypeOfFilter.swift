@@ -56,4 +56,17 @@ enum typeOfFilter: CaseIterable, Identifiable, CustomStringConvertible {
         }
     }
     
+    var image: Image {
+        switch self {
+        case .focus:
+            return Image.theme.camera
+        case .energy:
+            return Image.theme.lightning
+        case .motivation:
+            return Image.theme.meditaion
+        case .general:
+            return Image.theme.meditaion
+        }
+    }
+    
 }

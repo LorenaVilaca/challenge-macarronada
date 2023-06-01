@@ -16,7 +16,7 @@ extension Text {
     
     func headerThree() -> Text {
         return self
-            .font(.custom(Fonts.B, size: 16))
+            .font(.custom(Fonts.EB, size: 16))
             .foregroundColor(.white)
     }
     
@@ -37,7 +37,7 @@ extension Text {
     
     func textRegular() -> Text {
         return self
-            .font(.system(size: 16, weight: .regular))
+            .font(.custom(Fonts.L, size: 16))
 
     }
     
