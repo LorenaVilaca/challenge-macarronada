@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct challengeMacarronadaApp: App {
+    
+    @StateObject var lnManager = NotificationManager.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NotificationView()
+                .environmentObject(lnManager)
         }
     }
 }
