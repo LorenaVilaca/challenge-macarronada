@@ -12,7 +12,7 @@ import Charts
 struct HomeView: View {
     
     init () {
-//        NSSegmentedControl.Style = .rounded
+        //        NSSegmentedControl.Style = .rounded
     }
     
     @EnvironmentObject private var coordinator: Coordinator
@@ -46,20 +46,16 @@ struct HomeView: View {
                         
                         HStack {
                             
-                            VStack (alignment: .leading) {
+                            VStack (alignment: .center) {
                                 
                                 
-                                VStack {
-                                    
-                                    Picker(Text.texts.empty, selection: $graphDayViewModel.selectedSegmented) {
-                                        ForEach(segmented.allCases) { option in
-                                            Text(String(describing: option))
-                                        }
+                                Picker(Text.texts.empty, selection: $graphDayViewModel.selectedSegmented) {
+                                    ForEach(segmented.allCases) { option in
+                                        Text(String(describing: option))
                                     }
-                                    .pickerStyle(SegmentedPickerStyle())
-                                    
                                 }
-                                .frame(height: 30)
+                                .pickerStyle(SegmentedPickerStyle())
+                                
                                 .foregroundColor(.white)
                                 .background(.clear)
                                 .border(.white, width: 1)
@@ -70,38 +66,42 @@ struct HomeView: View {
                                 
                                 
                                 
-                                VStack {
+                                if graphDayViewModel.selectedSegmented == .now {
                                     
-                                    if graphDayViewModel.selectedSegmented == .now {
-                                        
-                                        Text("\(Text.texts.timeNow) \(graphDayViewModel.currentTime)").headerThree()
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .foregroundColor(.black)
-                                            .padding()
-                                            .onReceive(graphDayViewModel.timer) { _ in
-                                                graphDayViewModel.currentTime = dataFormat.formatCurrentTime()
-                                            }
-                                        
-                                    } else {
-                                        
-                                        Picker(Text.texts.empty, selection: $graphDayViewModel.selectedHour) {
-                                            ForEach(hours.allCases) { option in
-                                                Text(String(describing: option))
-                                                    .foregroundColor(.white)
-                                            }
-                                        }.padding()
+                                    Text("\(Text.texts.timeNow) \(graphDayViewModel.currentTime)").FEM_menuBar()
+                                        .frame(width: geo.size.width * 0.156, height: geo.size.height * 0.003, alignment: .leading)
+                                        .padding()
+                                        .onReceive(graphDayViewModel.timer) { _ in
+                                            graphDayViewModel.currentTime = dataFormat.formatCurrentTime()
+                                        }
+                                    
+                                } else {
+                                    
+                                    Picker(Text.texts.empty, selection: $graphDayViewModel.selectedHour) {
+                                        ForEach(hours.allCases) { option in
+                                            Text(String(describing: option))
+                                                .foregroundColor(.white)
+                                        }
                                     }
+                                    .frame(width: geo.size.width * 0.156, height: geo.size.height * 0.004, alignment: .center)
+                                    .padding()
+                                }
+                                
+                                VStack (alignment: .leading, spacing:  16) {
                                     
-                                    VStack (alignment: .leading) {
-                                        
-                                        RatingCircleComponent(circleRating: focusCircleRating, whichValue: .focus)
-                                        RatingCircleComponent(circleRating: energyCircleRating, whichValue: .energy)
-                                        RatingCircleComponent(circleRating: motivationCircleRating, whichValue: .motivation)
-                                        
-                                    }
+                                    RatingCircleComponent(circleRating: energyCircleRating, whichValue: .energy)
+                                        .frame(width: geo.size.width * 0.156, height: geo.size.height * 0.08, alignment: .leading)
+                                    
+                                    RatingCircleComponent(circleRating: focusCircleRating, whichValue: .focus)
+                                        .frame(width: geo.size.width * 0.156, height: geo.size.height * 0.08, alignment: .leading)
                                     
                                     
+                                    RatingCircleComponent(circleRating: motivationCircleRating, whichValue: .motivation)
+                                        .frame(width: geo.size.width * 0.156, height: geo.size.height * 0.08, alignment: .leading)
                                     
+                                }
+                                
+                                HStack {
                                     Button {
                                         
                                         if graphDayViewModel.selectedSegmented == .now {
@@ -139,26 +139,18 @@ struct HomeView: View {
                                         
                                         
                                     } label: {
-                                        Text(Text.texts.add)
-                                            .frame(minWidth: 0, maxWidth: .infinity)
-                                    }.buttonStyle(BlueButtonStyle())
-                                    
-                                    
-                                    Button {
-                                        Calculator.getPeakProductivity(infosDays: infosDays)
-                                        Calculator.getLowProductivity(infosDays: infosDays)
-                                        //                            print(graphDayViewModel.selectedHour)
-                                    } label: {
-                                        Text("Teste")
-                                            .frame(minWidth: 0, maxWidth: .infinity)
-                                    }.buttonStyle(BlueButtonStyle())
-                                    
-                                    
+                                        
+                                        Image.theme.addButton
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .edgesIgnoringSafeArea(.all)
+                                            .padding(.bottom, 4)
+                                        
+                                    }.buttonStyle(PlainButtonStyle())
+                                        
                                 }
-                                
-                                
-                                Spacer()
-                                
+                                .frame(width: geo.size.width * 0.156, height: geo.size.height * 0.03, alignment: .trailing)
+
                             }
                             .frame(width: geo.size.width * 0.17, height: geo.size.height * 0.43)
                             .background(Color.white.opacity(0.1))
@@ -169,8 +161,9 @@ struct HomeView: View {
                             VStack {
                                 
                                 VStack (alignment: .leading) {
-                                    Text(Text.texts.knowMore).secondTitle()
+                                    Text(Text.texts.knowMore).headerTwo()
                                         .frame(width: geo.size.width * 0.1, height: geo.size.height * 0.04, alignment: .leading)
+                                    
                                     
                                     
                                     ZStack (alignment: .leading) {
@@ -248,7 +241,7 @@ struct HomeView: View {
                                     .lineStyle(StrokeStyle(lineWidth: 3))
                                     .symbol() {
                                         Circle()
-                                            .fill(.red)
+                                            .fill(Color.theme.FirstBlueGradient)
                                             .frame(width: 12, height: 12)
                                     }
                                     
@@ -267,7 +260,7 @@ struct HomeView: View {
                                     .lineStyle(StrokeStyle(lineWidth: 3))
                                     .symbol() {
                                         Rectangle()
-                                            .fill(.blue)
+                                            .fill(Color.theme.FirstYellowGradient)
                                             .frame(width: 12, height: 12)
                                     }
                                     
@@ -285,7 +278,7 @@ struct HomeView: View {
                                     .lineStyle(StrokeStyle(lineWidth: 3))
                                     .symbol() {
                                         Triangle()
-                                            .fill(.green)
+                                            .fill(Color.theme.FirstPinkGradient)
                                             .frame(width: 12, height: 12)
                                     }
                                     
@@ -297,12 +290,15 @@ struct HomeView: View {
                         }
                         .chartForegroundStyleScale(
                             domain: [Text.texts.focus, Text.texts.energy, Text.texts.motivation],
-                            range: [.red, .blue, .green]
+                            range: [Color.theme.FirstBlueGradient, Color.theme.FirstYellowGradient, Color.theme.FirstPinkGradient]
                         )
+                        .padding()
                         
                         
                         
                     }
+                    .background(Color.white.opacity(0.1))
+                    .cornerRadius(8)
                     .frame(width: geo.size.width * 0.65, height: geo.size.height * 0.42)
                     
                 }
@@ -312,6 +308,7 @@ struct HomeView: View {
                 .frame(width: geo.size.width * 0.65, height: geo.size.height * 0.89)
                 
             }
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
             
             
         }

@@ -9,17 +9,26 @@ struct RatingCircleComponent: View {
     
     var body: some View {
         
-        VStack {
+        VStack (alignment: .leading) {
             
-            Text(whichValue.text).headerThree()
-                .frame(maxWidth: .infinity, alignment: .leading)
+            HStack (spacing: 8) {
                 
+                whichValue.image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(alignment: .leading)
+                
+                Text(whichValue.text).headerThree()
+                    .frame(alignment: .leading)
+                
+                
+            }
+            
             
             SelectAvaliationCircle(whichValue: whichValue, rating: $circleRating)
-                .frame(maxWidth: .infinity, alignment: .leading)
                 .environmentObject(graphDayViewModel)
         }
-        .padding()
         
     }
     
