@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D1DD2152A267E5C00240865 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2142A267E5C00240865 /* LocalNotification.swift */; };
-		0DFD2BA32A25262E00DB9FD4 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD2BA22A25262E00DB9FD4 /* LocalNotificationManager.swift */; };
 		0DFE78AE2A29278B00BFEA29 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE78AD2A29278B00BFEA29 /* NotificationManager.swift */; };
 		0DFE78B02A292AFE00BFEA29 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE78AF2A292AFE00BFEA29 /* NotificationView.swift */; };
 		A4B8C09E2A1D3438008FE8BE /* challengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		0D1DD2142A267E5C00240865 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
-		0DFD2BA22A25262E00DB9FD4 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		0DFE78AD2A29278B00BFEA29 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0DFE78AF2A292AFE00BFEA29 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		A4B8C09A2A1D3438008FE8BE /* challengeMacarronada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challengeMacarronada.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +44,6 @@
 		0DFD2BA12A25261800DB9FD4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0DFD2BA22A25262E00DB9FD4 /* LocalNotificationManager.swift */,
 				0DFE78AD2A29278B00BFEA29 /* NotificationManager.swift */,
 			);
 			path = Managers;
@@ -181,7 +178,6 @@
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
 				0D1DD2152A267E5C00240865 /* LocalNotification.swift in Sources */,
 				0DFE78B02A292AFE00BFEA29 /* NotificationView.swift in Sources */,
-				0DFD2BA32A25262E00DB9FD4 /* LocalNotificationManager.swift in Sources */,
 				0DFE78AE2A29278B00BFEA29 /* NotificationManager.swift in Sources */,
 				A4B8C0AE2A1D3661008FE8BE /* Image.swift in Sources */,
 				A4B8C09E2A1D3438008FE8BE /* challengeMacarronadaApp.swift in Sources */,
