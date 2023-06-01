@@ -48,23 +48,18 @@ struct HomeView: View {
                             
                             VStack (alignment: .center) {
                                 
-                                
                                 Picker(Text.texts.empty, selection: $graphDayViewModel.selectedSegmented) {
                                     ForEach(segmented.allCases) { option in
                                         Text(String(describing: option))
                                     }
                                 }
                                 .pickerStyle(SegmentedPickerStyle())
-                                
-                                .foregroundColor(.white)
                                 .background(.clear)
                                 .border(.white, width: 1)
                                 .cornerRadius(8)
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 10)
                                 .font(.headline)
-                                
-                                
                                 
                                 if graphDayViewModel.selectedSegmented == .now {
                                     
@@ -181,7 +176,7 @@ struct HomeView: View {
                                             
                                             Text(Text.texts.nemo).textRegular()
                                                 .frame(width: geo.size.width * 0.15, height: geo.size.height * 0.1)
-                                                .lineSpacing(10)
+//                                                .lineSpacing(10)
                                             
                                         }
                                         
