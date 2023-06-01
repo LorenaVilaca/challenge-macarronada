@@ -175,8 +175,7 @@ struct HomeView: View {
                                                 .frame(width: geo.size.width * 0.25, height: geo.size.height * 0.03, alignment: .leading)
                                             
                                             Text(Text.texts.nemo).textRegular()
-                                                .frame(width: geo.size.width * 0.15, height: geo.size.height * 0.1)
-//                                                .lineSpacing(10)
+                                                .frame(width: geo.size.width * 0.15, height: geo.size.height * 0.2)
                                             
                                         }
                                         

@@ -83,5 +83,5 @@ struct Texts {
     let add = "Adicionar"
     let knowMore = "Saiba mais"
     let whatBPT = "O que é o BPT?"
-    let nemo = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma."
+    let nemo = "É o Melhor Horário Biológico, que identifica os períodos do dia em que seu corpo está em seu melhor estado de produtividade, refletindo uma alta motivação, foco e energia."
 }
