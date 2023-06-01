@@ -8,6 +8,12 @@ struct ImageThemes {
     let aboutBPTimeImage = Image("imageAbout")
     let notificationScreenImage = Image("notificationImage")
     let calendarScreenImage = Image("calendarImage")
+    let camera = Image("camera")
+    let camera_pink = Image("camera-pink")
+    let lightning = Image("lightning")
+    let meditation = Image("meditation")
+    let meditation_blue = Image("meditation-pink")
+    let logo = Image("logo")
 }
 
 
