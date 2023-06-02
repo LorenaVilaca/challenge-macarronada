@@ -10,4 +10,5 @@ import Foundation
 enum ButtonTypeStyle {
     case up
     case down
+    case empty
 }

@@ -13,6 +13,7 @@ struct challengeMacarronadaApp: App {
     
     @AppStorage("showMenuBarExtra") private var showMenuBarExtra = true
     @StateObject var graphDayViewModel = GraphViewModel()
+    @StateObject private var dataController = DataController()
     
     init() {
         Shift.configureWithAppName("BPTiming")
@@ -21,10 +22,12 @@ struct challengeMacarronadaApp: App {
         WindowGroup {
               CoordinatorView()
                 .environmentObject(graphDayViewModel)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
         MenuBarExtra("App Teste", systemImage: "star", isInserted: $showMenuBarExtra) {
             StatusMenuView()
                 .environmentObject(graphDayViewModel)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
         .menuBarExtraStyle(.window)
     }

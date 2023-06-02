@@ -20,5 +20,6 @@ class DataFormat {
         formatter.dateFormat = "H"
         return formatter.string(from: date)
     }
+
     
 }
