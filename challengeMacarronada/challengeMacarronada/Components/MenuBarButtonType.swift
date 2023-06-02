@@ -12,19 +12,19 @@ struct MenuBarButtonType: View {
     let style: ButtonTypeStyle
     
     var body: some View {
-        HStack (spacing: 12) {
+        HStack {
             Image(systemName: style == .up ? "arrow.up.right" : "arrow.down.right")
                 .font(.system(size: 25, weight: .bold))
                 .foregroundColor(Color.white)
-            Text(style == .up ? "Você está em pico!" : "Você está em queda!")
-                .font(.system(size: 18, weight: .bold))
+
+            Text(style == .up ? "Você está em pico de produtividade!" : "Você está numa queda de produtividade!")
+                .FEM_menuBar()
+                .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(Color.white)
         }
-        .padding([.bottom, .top], 14)
-        .padding(.leading, 16)
-        .padding(.trailing, 23)
-        .frame(maxWidth: 258, maxHeight: 54)
-        .background(Color.theme.upOrDownGray)
+        .padding(7)
+        .frame(maxWidth: 258, minHeight: 55)
+        .background(Color.white.opacity(0.1))
         .cornerRadius(15)
     }
 }

@@ -51,6 +51,7 @@
 		C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58752A267E02008FCF2F /* StatusMenuView.swift */; };
 		C06A58792A268272008FCF2F /* MenuBarButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A58782A268272008FCF2F /* MenuBarButtonType.swift */; };
 		C06A587C2A26839E008FCF2F /* ButtonTypeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A587B2A26839E008FCF2F /* ButtonTypeStyle.swift */; };
+		C0AFB4A72A2904BF00E8456E /* ClearButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AFB4A62A2904BF00E8456E /* ClearButtonStyle.swift */; };
 		C0CA287F2A27C03B009A76CD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA287E2A27C03B009A76CD /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		C097F02E2A27B1F7005FA136 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
 		C097F02F2A27B1F7005FA136 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		C097F0302A27B628005FA136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C0AFB4A62A2904BF00E8456E /* ClearButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButtonStyle.swift; sourceTree = "<group>"; };
 		C0CA287E2A27C03B009A76CD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 				C06A58652A2510B3008FCF2F /* BlueButtonStyle.swift */,
 				C06A58672A251645008FCF2F /* PurpleButtonStyle.swift */,
 				C06A58692A252083008FCF2F /* WhiteButtonStyle.swift */,
+				C0AFB4A62A2904BF00E8456E /* ClearButtonStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -412,6 +415,8 @@
 				C0CA287F2A27C03B009A76CD /* Fonts.swift in Sources */,
 				A4F4779D2A27A8CD00E93482 /* enumSegmented.swift in Sources */,
 				A4F477A32A27A92B00E93482 /* InfoHourCalculator.swift in Sources */,
+				C0AFB4A72A2904BF00E8456E /* ClearButtonStyle.swift in Sources */,
+				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
 				A4F477A42A27A92B00E93482 /* DataFormat.swift in Sources */,
 				C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */,
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,

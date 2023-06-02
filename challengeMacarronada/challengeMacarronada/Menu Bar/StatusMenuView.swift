@@ -9,166 +9,152 @@ import Foundation
 import SwiftUI
 
 struct StatusMenuView: View {
+    
     @EnvironmentObject private var coordinator: Coordinator
-    @State var slider = 2.0
-    @State private var isEditing = false
-    @Environment (\.openWindow) private var openWindow
+    
     var body: some View {
-        VStack (spacing: 24) {
-            VStack (spacing: 32) {
-                HStack (spacing: 123) {
-                    Rectangle()
-                        .frame(width: 100, height: 30)
-                        .foregroundColor(Color.theme.imagesMenuBar)
-                    Image(systemName: "house")
-                        .foregroundColor(Color.theme.imagesMenuBar)
-                        .font(.system(size: 25, weight: .bold))
+        VStack (spacing: 16) {
+            VStack (spacing: 16) {
+                HStack {
+                    Image.theme.logo
+                    Spacer()
+                    ZStack {
+                        Button {
+//                            coordinator.present(page: .home)
+                        } label: {
+                            Image(systemName: "house")
+                                .foregroundColor(Color.theme.imagesMenuBar)
+                                .font(.system(size: 22, weight: .medium))
+                        }.buttonStyle(ClearButtonStyle())
+                    }
                 }
-                .padding([.leading, .trailing, .top], 24)
+                .padding(.leading, 22)
+                .padding(.trailing, 16)
+                .background(Color.theme.HeaderMenuBarGrey)
+                .ignoresSafeArea()
                 HStack {
                     Text(Text.texts.signs).headerOnboarding()
                         .multilineTextAlignment(.leading)
+                    .padding(.leading, 16)
                     Spacer()
                 }
-                .padding(.leading, 24)
             }
-            VStack (spacing: 18) {
-                HStack (spacing: 14) {
-                    Image(systemName: "bolt.fill")
-                        .font(.system(size: 18, weight: .bold))
-                    Text(Text.texts.energy).textButtons()
-                        .foregroundColor(Color.white)
-                    Spacer()
+            VStack {
+                VStack (spacing: 18) {
+                    HStack (spacing: 12) {
+                        Image("camera-pink")
+                        Text(Text.texts.focus)
+                            .font(.system(size: 18, weight: .bold))
+                            .foregroundColor(Color.white)
+                        Spacer()
+                    }
+                    .padding([.top, .leading,], 16)
+                    HStack (spacing: 8.57) {
+                        Circle()
+                            .fill(Color.purple)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Spacer()
+                    }
+                    .padding([.bottom, .leading,], 16)
                 }
-                .padding(.leading, 24)
-                HStack (spacing: 8.98) {
-                    Circle()
-                        .fill(Color.yellow)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Spacer()
+                VStack (spacing: 18) {
+                    HStack (spacing: 16) {
+                        Image("lightning")
+                        Text(Text.texts.energy)
+                            .font(.system(size: 18, weight: .bold))
+                            .foregroundColor(Color.white)
+                        Spacer()
+                    }
+                    .padding([.top, .leading,], 16)
+                    HStack (spacing: 8.57) {
+                        Circle()
+                            .fill(Color.yellow)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Spacer()
+                    }
+                    .padding([.bottom, .leading,], 16)
                 }
-                .padding(.leading, 24)
+                VStack (spacing: 18) {
+                    HStack (spacing: 14) {
+                        Image("meditation-blue")
+                        Text(Text.texts.motivation)
+                            .font(.system(size: 18, weight: .bold))
+                            .foregroundColor(Color.white)
+                        Spacer()
+                    }
+                    .padding([.top, .leading,], 16)
+                    HStack (spacing: 8.57) {
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Circle()
+                            .fill(Color.theme.imagesMenuBar)
+                            .frame(width: 30, height: 30)
+                        Spacer()
+                    }
+                    .padding(.leading, 16)
+                }
+                HStack {
+                    Spacer()
+                    Button {
+                        //                    coordinator.present(sheet: .onboardingTwo)
+                    } label: {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 17, weight: .semibold))
+                            .foregroundColor(.black)
+                            .frame(width: 55, height: 30)
+                    }.buttonStyle(WhiteButtonStyle())
+                }
             }
-            VStack (spacing: 18) {
-                HStack (spacing: 16) {
-                    Image("camera")
-                    Text(Text.texts.focus)
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color.white)
-                    Spacer()
-                }
-                .padding(.leading, 24)
-                HStack (spacing: 8.98) {
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Spacer()
-                }
-                .padding(.leading, 24)
-            }
-            VStack (spacing: 18) {
-                HStack (spacing: 14) {
-                    Image("meditation")
-                    Text(Text.texts.motivation)
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color.white)
-                    Spacer()
-                }
-                .padding(.leading, 24)
-                HStack (spacing: 8.98) {
-                    Circle()
-                        .fill(Color.purple)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Circle()
-                        .fill(Color.theme.imagesMenuBar)
-                        .frame(width: 31.42, height: 31.42)
-                    Spacer()
-                }
-                .padding(.leading, 24)
-            }
-            ZStack {
-                Button {
-//                    coordinator.present(sheet: .onboardingTwo)
-                } label: {
-                    Text(Text.texts.send)
-                        .font(.system(size: 17, weight: .semibold))
-                        .frame(maxWidth: 148/*, maxWidth: .infinity*/)
-                }.buttonStyle(PurpleButtonStyle())
-            }
+            .background(Color.white.opacity(0.1))
+            .cornerRadius(8)
+            .padding([.leading, .trailing], 16)
             Divider()
-                .frame(width: 258)
+                .padding([.trailing, .leading], 23.5)
             MenuBarButtonType(style: .up)
-//            Text ("Você está em queda de energia")
-//            Button ("Veja o resumo completo"){
-//                print ("foi")
-//                openWindow(id: "app")
-//            }
-//            Divider()
-//                .padding(.horizontal, 10.0)
-//            Slider(
-//                        value: $slider,
-//                        in: 1...5,
-//                        onEditingChanged: { editing in
-//                            isEditing = editing
-//                        }
-//            )
-//            Text ("alo")
-//            Slider(value: Binding(
-//                            get: { slider },
-//                            set: { newValue in
-//                                slider = round(newValue)
-//
-//                            }
-//                        ), in: 1...5)
-            
+                .padding(.bottom, 16)
+            //Spacer()
         }
-        .padding(.vertical)
-        .background(Color.theme.menuBarBack)
+        .background(Image("MenuBarBackground").resizable())
+        .ignoresSafeArea()
     }
 }
 
 struct StatusMenuView_Previews: PreviewProvider {
     static var previews: some View {
         StatusMenuView()
-    }
-}
-
-
-struct CustomSlider: View {
-    var body: some View {
-        Text("")
     }
 }

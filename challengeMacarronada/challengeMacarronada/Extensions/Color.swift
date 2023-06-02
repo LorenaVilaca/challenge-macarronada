@@ -16,6 +16,8 @@ struct ColorThemes {
     let SecondPinkGradient = Color("SecondPinkGradient")
     let FirstYellowGradient = Color("FirstYellowGradient")
     let SecondYellowGradient = Color("SecondYellowGradient")
+    let HeaderMenuBarGrey = Color("header_menuBar")
+    let DarkGreyBackground = Color("DarkGreyBackground")
 }
 
 struct Gradients {

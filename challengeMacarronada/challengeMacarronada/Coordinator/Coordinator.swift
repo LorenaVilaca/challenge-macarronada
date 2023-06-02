@@ -49,6 +49,7 @@ class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath()
     @Published var sheet: Sheet?
+    @Published var page: Page?
     
     var sheetQuantity = 3
     
@@ -65,6 +66,10 @@ class Coordinator: ObservableObject {
             OnboardingManager.shared.onboardingWasSeen()
         }
 
+    }
+    
+    func present(page: Page) {
+        self.page = page
     }
     
     func dissmissSheet() {
