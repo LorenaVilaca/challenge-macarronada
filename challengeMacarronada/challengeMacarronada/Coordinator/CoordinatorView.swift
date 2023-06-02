@@ -12,7 +12,7 @@ struct CoordinatorView: View {
     @StateObject var coordinator = Coordinator()
     
     @StateObject private var dataController = DataController()
-    @StateObject private var graphDayViewModel = GraphViewModel()
+    @EnvironmentObject private var graphDayViewModel: GraphViewModel
     @StateObject private var notificationManager = NotificationManager.shared
     
     var body: some View {

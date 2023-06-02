@@ -416,7 +416,6 @@
 				A4F4779D2A27A8CD00E93482 /* enumSegmented.swift in Sources */,
 				A4F477A32A27A92B00E93482 /* InfoHourCalculator.swift in Sources */,
 				C0AFB4A72A2904BF00E8456E /* ClearButtonStyle.swift in Sources */,
-				A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */,
 				A4F477A42A27A92B00E93482 /* DataFormat.swift in Sources */,
 				C06A58762A267E02008FCF2F /* StatusMenuView.swift in Sources */,
 				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
@@ -559,7 +558,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = GMAYGR5U3T;
+				DEVELOPMENT_TEAM = 9YF48LKAWG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -589,7 +588,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = GMAYGR5U3T;
+				DEVELOPMENT_TEAM = 9YF48LKAWG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

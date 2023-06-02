@@ -51,6 +51,11 @@ extension Text {
             .font(.system(size: 20, weight: .bold))
     }
     
+    func textMenuBar() -> Text {
+        return self
+            .font(.custom(Fonts.M, size: 16))
+    }
+    
     static let texts = Texts()
     
 }

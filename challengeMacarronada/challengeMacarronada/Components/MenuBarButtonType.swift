@@ -18,7 +18,7 @@ struct MenuBarButtonType: View {
                 .foregroundColor(Color.white)
 
             Text(style == .up ? "Você está em pico de produtividade!" : "Você está numa queda de produtividade!")
-                .FEM_menuBar()
+                .textMenuBar()
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(Color.white)
         }

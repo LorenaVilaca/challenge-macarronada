@@ -11,150 +11,121 @@ import SwiftUI
 struct StatusMenuView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
+    @EnvironmentObject private var graphDayViewModel: GraphViewModel
+    @Environment(\.managedObjectContext) var moc
+    
+    @State private var focusCircleRating = 1
+    @State private var energyCircleRating = 1
+    @State private var motivationCircleRating = 1
+    
+    class geo {
+        
+        static let size = geo()
+        
+        var width = 248.0
+        var height = 509.0
+        
+    }
     
     var body: some View {
-        VStack (spacing: 16) {
-            VStack (spacing: 16) {
-                HStack {
-                    Image.theme.logo
-                    Spacer()
-                    ZStack {
-                        Button {
-//                            coordinator.present(page: .home)
-                        } label: {
-                            Image(systemName: "house")
-                                .foregroundColor(Color.theme.imagesMenuBar)
-                                .font(.system(size: 22, weight: .medium))
-                        }.buttonStyle(ClearButtonStyle())
+            
+            ZStack (alignment: .center) {
+                
+                Image.theme.menuBarBackground
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack (spacing: 16) {
+                    
+                    HStack {
+                        Image.theme.logo
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .edgesIgnoringSafeArea(.all)
+                            .frame(width: geo.size.width * 0.27, height: geo.size.height * 0.06)
+                            .padding()
+                            .padding(.top, geo.size.height * 0.07)
+                        Spacer()
+                        Image.theme.house
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .edgesIgnoringSafeArea(.all)
+                            .frame(width: geo.size.width * 0.09, height: geo.size.height * 0.04)
+                            .padding()
+                            .padding(.top, geo.size.height * 0.07)
                     }
+                    .frame(width: geo.size.width, height: geo.size.height * 0.08)
+                    .padding()
+                    .background(Color.theme.HeaderMenuBarGrey)
+                    .ignoresSafeArea()
+                    
+                    HStack {
+                        Text(Text.texts.signs).textMenuBar()
+                            .frame(width: geo.size.width * 0.83, height: geo.size.height * 0.04, alignment: .leading)
+                    }
+                    .frame(width: geo.size.width * 0.83, height: geo.size.height * 0.04, alignment: .leading)
+                    
+                    VStack (alignment: .leading, spacing:  16) {
+
+                        RatingCircleComponent(circleRating: energyCircleRating, whichValue: .energy)
+                            .frame(width: geo.size.width * 0.74, height: geo.size.height * 0.14, alignment: .leading)
+
+                        RatingCircleComponent(circleRating: focusCircleRating, whichValue: .focus)
+                            .frame(width: geo.size.width * 0.74, height: geo.size.height * 0.14, alignment: .leading)
+
+                        RatingCircleComponent(circleRating: motivationCircleRating, whichValue: .motivation)
+                            .frame(width: geo.size.width * 0.74, height: geo.size.height * 0.14, alignment: .leading)
+                        
+                        HStack {
+                            Button {
+                                
+                                    let info = InfoHour(context: moc)
+                                    info.id = UUID()
+                                    info.hour = graphDayViewModel.selectedHour.description
+                                    info.valueFocus = graphDayViewModel.valueFocus
+                                    info.valueEnergy = graphDayViewModel.valueEnergy
+                                    info.valueMotivation = graphDayViewModel.valueMotivation
+                                    
+                                    //                                try? moc.save()
+                                
+                                    print(info)
+
+                            } label: {
+                                
+                                Image.theme.addButton
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .edgesIgnoringSafeArea(.all)
+                                    .padding(.bottom, 4)
+                                
+                            }.buttonStyle(PlainButtonStyle())
+                                
+                        }
+                        .frame(width: geo.size.width * 0.74, height: geo.size.height * 0.06, alignment: .trailing)
+                        
+
+                    }
+                    .frame(width: geo.size.width * 0.87, height: geo.size.height * 0.61)
+//                    .padding()
+                    .background(Color.white.opacity(0.1))
+                    .cornerRadius(8)
+                    
+                    Divider()
+                        .frame(width: geo.size.width * 0.81)
+                    
+                    MenuBarButtonType(style: .up)
+                        .frame(width: geo.size.width * 0.88, height: geo.size.height * 0.11)
+                        .padding(.bottom, geo.size.height * 0.09)
+                    
                 }
-                .padding(.leading, 22)
-                .padding(.trailing, 16)
-                .background(Color.theme.HeaderMenuBarGrey)
-                .ignoresSafeArea()
-                HStack {
-                    Text(Text.texts.signs).headerOnboarding()
-                        .multilineTextAlignment(.leading)
-                    .padding(.leading, 16)
-                    Spacer()
-                }
+                .frame(width: geo.size.width, height: geo.size.height)
+                
             }
-            VStack {
-                VStack (spacing: 18) {
-                    HStack (spacing: 12) {
-                        Image("camera-pink")
-                        Text(Text.texts.focus)
-                            .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(Color.white)
-                        Spacer()
-                    }
-                    .padding([.top, .leading,], 16)
-                    HStack (spacing: 8.57) {
-                        Circle()
-                            .fill(Color.purple)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Spacer()
-                    }
-                    .padding([.bottom, .leading,], 16)
-                }
-                VStack (spacing: 18) {
-                    HStack (spacing: 16) {
-                        Image("lightning")
-                        Text(Text.texts.energy)
-                            .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(Color.white)
-                        Spacer()
-                    }
-                    .padding([.top, .leading,], 16)
-                    HStack (spacing: 8.57) {
-                        Circle()
-                            .fill(Color.yellow)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Spacer()
-                    }
-                    .padding([.bottom, .leading,], 16)
-                }
-                VStack (spacing: 18) {
-                    HStack (spacing: 14) {
-                        Image("meditation-blue")
-                        Text(Text.texts.motivation)
-                            .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(Color.white)
-                        Spacer()
-                    }
-                    .padding([.top, .leading,], 16)
-                    HStack (spacing: 8.57) {
-                        Circle()
-                            .fill(Color.blue)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Circle()
-                            .fill(Color.theme.imagesMenuBar)
-                            .frame(width: 30, height: 30)
-                        Spacer()
-                    }
-                    .padding(.leading, 16)
-                }
-                HStack {
-                    Spacer()
-                    Button {
-                        //                    coordinator.present(sheet: .onboardingTwo)
-                    } label: {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 17, weight: .semibold))
-                            .foregroundColor(.black)
-                            .frame(width: 55, height: 30)
-                    }.buttonStyle(WhiteButtonStyle())
-                }
-            }
-            .background(Color.white.opacity(0.1))
-            .cornerRadius(8)
-            .padding([.leading, .trailing], 16)
-            Divider()
-                .padding([.trailing, .leading], 23.5)
-            MenuBarButtonType(style: .up)
-                .padding(.bottom, 16)
-            //Spacer()
-        }
-        .background(Image("MenuBarBackground").resizable())
-        .ignoresSafeArea()
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+        
     }
 }
 
-struct StatusMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        StatusMenuView()
-    }
-}
+
+
