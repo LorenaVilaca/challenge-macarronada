@@ -58,7 +58,7 @@ extension Text {
 struct Texts {
     
     let titleBPT = "BPTime"
-    let fillInSignals = "Preencha seus sinais"
+    let fillInSignals = "Preencha seus sinais!"
     let yourChart = "Aqui o seu BPT"
     let timeNow = "Horário atual: "
     let hour = "Hora"
