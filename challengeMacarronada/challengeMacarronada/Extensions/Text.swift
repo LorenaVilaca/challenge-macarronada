@@ -51,6 +51,11 @@ extension Text {
             .font(.system(size: 20, weight: .bold))
     }
     
+    func textMenuBar() -> Text {
+        return self
+            .font(.custom(Fonts.M, size: 16))
+    }
+    
     static let texts = Texts()
     
 }
@@ -84,4 +89,6 @@ struct Texts {
     let knowMore = "Saiba mais"
     let whatBPT = "O que é o BPT?"
     let nemo = "É o Melhor Horário Biológico, que identifica os períodos do dia em que seu corpo está em seu melhor estado de produtividade, refletindo uma alta motivação, foco e energia."
+    let peak = "Você está em pico de produtividade!"
+    let low = "Você está numa queda de produtividade!"
 }

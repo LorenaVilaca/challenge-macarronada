@@ -7,13 +7,8 @@
 
 import SwiftUI
 import Charts
-//import AxisSegmentedView
 
 struct HomeView: View {
-    
-    init () {
-        //        NSSegmentedControl.Style = .rounded
-    }
     
     @EnvironmentObject private var coordinator: Coordinator
     @Environment(\.managedObjectContext) var moc
@@ -309,32 +304,3 @@ struct HomeView: View {
     }
 }
 
-
-
-
-//AxisSegmentedView(selection: $selection, constant: .init()) {
-//    Image(systemName: "align.horizontal.left")
-//        .itemTag(0, selectArea: 500) {
-//            Image(systemName: "align.horizontal.left.fill")
-//        }
-//    Image(systemName: "align.horizontal.right")
-//        .itemTag(1, selectArea: 500) {
-//            Image(systemName: "align.horizontal.right.fill")
-//        }
-//    Image(systemName: "align.vertical.top")
-//        .itemTag(2, selectArea: 500) {
-//            Image(systemName: "align.vertical.top.fill")
-//        }
-//    Image(systemName: "align.vertical.bottom")
-//        .itemTag(3, selectArea: 500) {
-//            Image(systemName: "align.vertical.bottom.fill")
-//        }
-//} style: {
-//    ASBasicStyle()
-//} onTapReceive: { selectionTap in
-//    /// Imperative syntax
-//    print("---------------------")
-//    print("Selection : ", selectionTap)
-//    print("Already selected : ", self.selection == selectionTap)
-//}
-//.frame(height: 44)

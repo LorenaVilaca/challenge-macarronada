@@ -68,7 +68,7 @@ class InfoHourCalculator {
             
         }
         
-        print(getLargestValues(array: arrayProductivity))
+//        print(getLargestValues(array: arrayProductivity))
         return getLargestValues(array: arrayProductivity)
         
     }
@@ -89,8 +89,22 @@ class InfoHourCalculator {
             
         }
         
-        print(getSmalletsValues(array: arrayProductivity))
+//        print(getSmalletsValues(array: arrayProductivity))
         return getSmalletsValues(array: arrayProductivity)
+    }
+    
+    func isThisHourPeakOrLow(infosDays: FetchedResults<InfoHour>, hour: String) -> ButtonTypeStyle {
+        
+        let peakHours = getPeakProductivity(infosDays: infosDays)
+        let lowHours = getLowProductivity(infosDays: infosDays)
+        
+        if peakHours.contains("\(hour)h") {
+            return .up
+        } else if lowHours.contains("\(hour)h") {
+            return .down
+        } else {
+            return .empty
+        }
     }
     
 }

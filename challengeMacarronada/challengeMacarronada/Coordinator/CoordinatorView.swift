@@ -11,9 +11,11 @@ struct CoordinatorView: View {
     
     @StateObject var coordinator = Coordinator()
     
-    @StateObject private var dataController = DataController()
-    @StateObject private var graphDayViewModel = GraphViewModel()
+    
+    @EnvironmentObject private var graphDayViewModel: GraphViewModel
     @StateObject private var notificationManager = NotificationManager.shared
+    
+    @Environment(\.managedObjectContext) var moc
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -29,7 +31,7 @@ struct CoordinatorView: View {
         .environmentObject(coordinator)
         .environmentObject(graphDayViewModel)
         .environmentObject(notificationManager)
-        .environment(\.managedObjectContext, dataController.container.viewContext)
+        .environment(\.managedObjectContext, moc)
     }
 }
 
