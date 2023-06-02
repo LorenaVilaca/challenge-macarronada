@@ -18,8 +18,6 @@ struct ImageThemes {
     let addButton = Image("addButton")
     let backgroundKnowMore = Image("backgroundKnowMore")
     let meditaion = Image("meditation")
-    let camera = Image("camera")
-    let lightning = Image("lightning")
 }
 
 

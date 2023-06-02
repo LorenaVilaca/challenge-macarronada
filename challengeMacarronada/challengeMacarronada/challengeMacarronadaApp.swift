@@ -20,7 +20,7 @@ struct challengeMacarronadaApp: App {
         WindowGroup {
               CoordinatorView()
         }
-        MenuBarExtra("App Teste", systemImage: "star", isInserted: $showMenuBarExtra) {
+        MenuBarExtra("App Teste", systemImage: "clock", isInserted: $showMenuBarExtra) {
             StatusMenuView()
         }.menuBarExtraStyle(.window)
     }
