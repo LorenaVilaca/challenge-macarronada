@@ -24,7 +24,7 @@ struct challengeMacarronadaApp: App {
                 .environmentObject(graphDayViewModel)
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
-        MenuBarExtra("App Teste", systemImage: "star", isInserted: $showMenuBarExtra) {
+        MenuBarExtra("App Teste", systemImage: "clock", isInserted: $showMenuBarExtra) {
             StatusMenuView()
                 .environmentObject(graphDayViewModel)
                 .environment(\.managedObjectContext, dataController.container.viewContext)
