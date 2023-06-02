@@ -127,6 +127,7 @@
 		0DFD2BA42A253BF900DB9FD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C06A586B2A252210008FCF2F /* HomeView.swift */,
 				0DFE78AF2A292AFE00BFEA29 /* NotificationView.swift */,
 			);
 			path = Views;
@@ -170,7 +171,6 @@
 				A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */,
 				A4B8C0A62A1D343A008FE8BE /* challengeMacarronada.entitlements */,
 				A4B8C0A32A1D343A008FE8BE /* Preview Content */,
-				C06A586B2A252210008FCF2F /* HomeView.swift */,
 			);
 			path = challengeMacarronada;
 			sourceTree = "<group>";

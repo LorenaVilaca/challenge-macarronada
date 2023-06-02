@@ -33,13 +33,13 @@ class OnboardingManager {
     var sheetQuantity = 3
     
     var didUserNotSeenOnboarding: Bool {
-        return UserDefaults.standard.value(forKey: "onboardingggggg") != nil
+        return UserDefaults.standard.value(forKey: "onboarding") != nil
     }
     
     private init () {}
     
     func onboardingWasSeen() {
-        UserDefaults.standard.setValue(true, forKey: "onboardingggggg")
+        UserDefaults.standard.setValue(true, forKey: "onboarding")
         
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UserNotifications
+import SwiftUI
 
 class NotificationManager: NSObject, ObservableObject, UNUserNotificationCenterDelegate{
     
@@ -24,6 +25,7 @@ class NotificationManager: NSObject, ObservableObject, UNUserNotificationCenterD
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             if granted {
                 print("Access Granted!")
+
             } else {
                 print("Access Not Granted")
             }
@@ -42,8 +44,8 @@ class NotificationManager: NSObject, ObservableObject, UNUserNotificationCenterD
         content.body = localNotification.body
         content.sound = UNNotificationSound.default
 
-        
-        for hour in 8...24 {
+        let hours = [0] + Array(8...23)
+        for hour in hours {
             var dateComponents = DateComponents()
             dateComponents.hour = hour
             dateComponents.minute = 0
