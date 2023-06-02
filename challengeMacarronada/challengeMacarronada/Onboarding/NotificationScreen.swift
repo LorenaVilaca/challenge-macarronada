@@ -10,6 +10,7 @@ import SwiftUI
 struct NotificationScreen: View {
     
     @EnvironmentObject private var coordinator: Coordinator
+    @EnvironmentObject private var notificationManager: NotificationManager
     
     var body: some View {
         VStack (spacing: 32) {
@@ -36,6 +37,7 @@ struct NotificationScreen: View {
                     ZStack {
                         Button {
                             coordinator.present(sheet: .onboardingThree)
+                            notificationManager.requestAuthorization()
                         } label: {
                             Text(Text.texts.enable).textButtons()
                                 .frame(maxWidth: 148)
@@ -58,6 +60,16 @@ struct NotificationScreen: View {
             .padding(.bottom, 53)
         }
         .frame(maxWidth: 800, maxHeight: 560)
+        .onDisappear(){
+            let localNotification = LocalNotification(identifier: UUID().uuidString,
+                                                                          title: "Como você está agora?",
+                                                                          body: "Nos informe como está seu Foco, sua Energia e sua Motivação.",
+                                                                          repeats: true)
+            notificationManager.deleteNotifications()
+            notificationManager.scheduleTriggerNotification(localNotification: localNotification)
+            notificationManager.printNotifications()
+
+        }
     }
 }
 

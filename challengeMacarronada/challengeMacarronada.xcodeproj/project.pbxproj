@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1DD2152A267E5C00240865 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2142A267E5C00240865 /* LocalNotification.swift */; };
+		0DFE78AE2A29278B00BFEA29 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE78AD2A29278B00BFEA29 /* NotificationManager.swift */; };
+		0DFE78B02A292AFE00BFEA29 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE78AF2A292AFE00BFEA29 /* NotificationView.swift */; };
 		A4B8C09E2A1D3438008FE8BE /* challengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */; };
-		A4B8C0A02A1D3438008FE8BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8C09F2A1D3438008FE8BE /* ContentView.swift */; };
 		A4B8C0A22A1D343A008FE8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */; };
 		A4B8C0A52A1D343A008FE8BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B8C0A42A1D343A008FE8BE /* Preview Assets.xcassets */; };
 		A4B8C0AE2A1D3661008FE8BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8C0AD2A1D3661008FE8BE /* Image.swift */; };
@@ -54,9 +56,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D1DD2142A267E5C00240865 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		0DFE78AD2A29278B00BFEA29 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		0DFE78AF2A292AFE00BFEA29 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		A4B8C09A2A1D3438008FE8BE /* challengeMacarronada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challengeMacarronada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = challengeMacarronadaApp.swift; sourceTree = "<group>"; };
-		A4B8C09F2A1D3438008FE8BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B8C0A42A1D343A008FE8BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4B8C0A62A1D343A008FE8BE /* challengeMacarronada.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = challengeMacarronada.entitlements; sourceTree = "<group>"; };
@@ -114,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DFD2BA12A25261800DB9FD4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE78AD2A29278B00BFEA29 /* NotificationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0DFD2BA42A253BF900DB9FD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C06A586B2A252210008FCF2F /* HomeView.swift */,
+				0DFE78AF2A292AFE00BFEA29 /* NotificationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A4B8C0912A1D3438008FE8BE = {
 			isa = PBXGroup;
 			children = (
@@ -145,13 +166,13 @@
 				C06A58642A251095008FCF2F /* Style */,
 				C06A585A2A212FA8008FCF2F /* Onboarding */,
 				A4B8C0AC2A1D3651008FE8BE /* Extensions */,
+				0DFD2BA12A25261800DB9FD4 /* Managers */,
+				0DFD2BA42A253BF900DB9FD4 /* Views */,
 				C06A584E2A1FDE5E008FCF2F /* CalendarEvent */,
 				A4B8C09D2A1D3438008FE8BE /* challengeMacarronadaApp.swift */,
-				A4B8C09F2A1D3438008FE8BE /* ContentView.swift */,
 				A4B8C0A12A1D343A008FE8BE /* Assets.xcassets */,
 				A4B8C0A62A1D343A008FE8BE /* challengeMacarronada.entitlements */,
 				A4B8C0A32A1D343A008FE8BE /* Preview Content */,
-				C06A586B2A252210008FCF2F /* HomeView.swift */,
 			);
 			path = challengeMacarronada;
 			sourceTree = "<group>";
@@ -189,6 +210,7 @@
 		A4F477A02A27A91B00E93482 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0D1DD2142A267E5C00240865 /* LocalNotification.swift */,
 				A4F477A22A27A92B00E93482 /* DataFormat.swift */,
 				A4F477A12A27A92B00E93482 /* InfoHourCalculator.swift */,
 			);
@@ -370,6 +392,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B8C0B02A1D3C16008FE8BE /* Color.swift in Sources */,
+				0D1DD2152A267E5C00240865 /* LocalNotification.swift in Sources */,
+				0DFE78B02A292AFE00BFEA29 /* NotificationView.swift in Sources */,
+				0DFE78AE2A29278B00BFEA29 /* NotificationManager.swift in Sources */,
 				A4F477972A27A88B00E93482 /* Date.swift in Sources */,
 				C06A587C2A26839E008FCF2F /* ButtonTypeStyle.swift in Sources */,
 				A4F477AA2A27A99700E93482 /* RatingCircleComponent.swift in Sources */,
@@ -528,11 +554,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = challengeMacarronada/challengeMacarronada.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = GMAYGR5U3T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -557,11 +584,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = challengeMacarronada/challengeMacarronada.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"challengeMacarronada/Preview Content\"";
-				DEVELOPMENT_TEAM = 9YF48LKAWG;
+				DEVELOPMENT_TEAM = GMAYGR5U3T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
